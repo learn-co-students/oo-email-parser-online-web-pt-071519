@@ -4,16 +4,16 @@
 # or whitespace (' ').
 require 'pry'
 
-class EmailAddressParser 
+class EmailAddressParser
+  attr_accessor :EmailAddressParser
   
-  attr_accessor :emails
-  
-  def initialize(emails) 
-    @emails = emails
+  def initialize(emails_string)
+    @emails_string = emails_string
   end
   
   def parse 
-    emails.split(", ").map {|email| email.split(" ")}.flatten.uniq
+    @emails_string.split(", ").map {|email| email.split(" ")}.flatten.uniq
     #binding.pry
   end
+    
 end
