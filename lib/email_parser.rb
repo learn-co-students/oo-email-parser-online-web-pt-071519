@@ -13,7 +13,7 @@ class EmailAddressParser
 
   def parse
     email_array = []
-    email_array = @emails.split(/[,\s]/)
+    email_array = @emails.split(/[,\s]/) # This is a parse method to separate the emails be either a comma or space
     email_array = email_array.reject { |e| e == ""}
     email_array.uniq
   end
